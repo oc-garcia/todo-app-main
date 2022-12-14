@@ -37,6 +37,13 @@ body {
   justify-content: space-between;
 }
 
+.header__title {
+  color: var(--Light_Grayish_Blue);
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+}
+
 .task__insert-container {
   display: flex;
   align-items: center;
@@ -67,7 +74,7 @@ body {
 }
 
 .task__insert-input:focus {
-    outline: none;
+  outline: none;
 }
 
 .task__insert-input::placeholder {
@@ -75,11 +82,37 @@ body {
   color: var(--Dark_Grayish_Blue);
 }
 
-.header__title {
+.task__new-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0rem 1rem;
+  background-color: var(--Very_Dark_Desaturated_Blue);
+  width: 90%;
+  height: 2.5rem;
+  border: none;
+  border-bottom: 1px solid var(--Dark_Grayish_Blue);
+}
+
+.task__new-task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1rem;
+  background-color: var(--Very_Dark_Desaturated_Blue);
+  width: 100%;
+  height: 2.5rem;
+  border: none;
   color: var(--Light_Grayish_Blue);
-  font-weight: 800;
-  font-size: 1.5rem;
-  letter-spacing: 0.5rem;
+}
+
+.task__new-container:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+.task__new-container:last-child {
+  border-radius: 0 0 5px 5px;
+  border: none;
 }
 
 .attribution {

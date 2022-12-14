@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Frontend Mentor | To Do app</title>
+    <title>To Do app</title>
   </head>
   <body>
     <header class="header__container">
@@ -17,14 +17,17 @@
     </header>
     <div class="task__insert-container">
       <div class="task__circle"></div>
-      <input type="text" class="task__insert-input" placeholder="Create a new todo..." />
+      <input type="text" class="task__insert-input" id="taskCreator" placeholder="Create a new todo..." />
     </div>
-    <!-- Add dynamic number -->
-    items left All Active Completed Clear Completed Drag and drop to reorder list
+    <div class="task__new-task-field" id="newTask"></div>
+    
 
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
       <a href="#">Your Name Here</a>.
     </div>
+    <script src="./js/main.js"></script>
   </body>
 </html>
+
+
