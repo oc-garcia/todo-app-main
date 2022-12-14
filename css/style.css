@@ -1,7 +1,91 @@
-     .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+:root {
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  --Bright_Blue: hsl(220, 98%, 61%);
+  --Check_Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  /*light theme*/
+  --Very_Light_Gray: hsl(0, 0%, 98%);
+  --Very_Light_Grayish_Blue: hsl(236, 33%, 92%);
+  --Light_Grayish_Blue: hsl(233, 11%, 84%);
+  --Dark_Grayish_Blue: hsl(236, 9%, 61%);
+  --Very_Dark_Grayish_Blue: hsl(235, 19%, 35%);
+  /*dark theme*/
+  --Very_Dark_Blue: hsl(235, 21%, 11%);
+  --Very_Dark_Desaturated_Blue: hsl(235, 24%, 19%);
+  --Light_Grayish_Blue: hsl(234, 39%, 85%);
+  --Light_Grayish_Blue_hover: hsl(236, 33%, 92%); /*hover*/
+  --Dark_Grayish_Blue: hsl(234, 11%, 52%);
+  --Very_Dark_Grayish_Blue: hsl(233, 14%, 35%);
+  --Very_Dark_Grayish_Blue_dark: hsl(237, 14%, 26%);
+}
+
+body {
+  height: 100vh;
+  background-image: url(../images/bg-mobile-dark.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--Very_Dark_Blue);
+}
+
+.header__container {
+  margin: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task__insert-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 1rem;
+  background-color: var(--Very_Dark_Desaturated_Blue);
+  width: 90%;
+  height: 2.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.task__circle {
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+  background-color: var(--Very_Dark_Desaturated_Blue);
+  border: solid 1px var(--Very_Dark_Grayish_Blue_dark);
+  border-radius: 50%;
+}
+
+.task__insert-input {
+  background-color: var(--Very_Dark_Desaturated_Blue);
+  border: none;
+  width: 100%;
+  color: var(--Dark_Grayish_Blue);
+}
+
+.task__insert-input:focus {
+    outline: none;
+}
+
+.task__insert-input::placeholder {
+  text-align: left;
+  color: var(--Dark_Grayish_Blue);
+}
+
+.header__title {
+  color: var(--Light_Grayish_Blue);
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
