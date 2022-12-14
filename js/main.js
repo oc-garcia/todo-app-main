@@ -1,5 +1,7 @@
 let taskCreator = document.getElementById("taskCreator");
 let newTaskField = document.getElementById("newTask");
+let task = document.getElementById("task");
+let eraseTask = document.getElementById("eraseTask");
 
 document.addEventListener("keyup", (event) => {
   switch (event.key) {
@@ -14,3 +16,13 @@ document.addEventListener("keyup", (event) => {
       break;
   }
 });
+
+if (eraseTask) {
+  for (let i = 0; i < eraseTask.length; i++) {
+    eraseTask[i].addEventListener("click", clearTask(task[i]));
+  }
+}
+
+function clearTask(prmt) {
+  console.log(prmt);
+}
