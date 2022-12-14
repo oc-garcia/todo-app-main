@@ -5,7 +5,7 @@ document.addEventListener("keyup", (event) => {
   switch (event.key) {
     case "Enter":
       if (taskCreator.value != "") {
-        newTaskField.innerHTML += `<div class="task__new-container"><div class="task__circle"></div><div class="task__new-task">${taskCreator.value}</div></div>`;
+        newTaskField.innerHTML += `<div class="task__new-container"><div class="task__circle"></div><div class="task__new-task" id="task">${taskCreator.value}</div><img src="./images/icon-cross.svg" id="eraseTask"></div>`;
         taskCreator.value = "";
       }
       break;
