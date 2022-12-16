@@ -4,7 +4,9 @@ let newTaskField = document.getElementById("newTask");
 document.addEventListener("keyup", (event) => {
   switch (event.key) {
     case "Enter":
-      createTask();
+      if (taskCreator.value != "") {
+        createTask();
+      }
       break;
 
     default:
