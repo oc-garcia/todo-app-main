@@ -1,11 +1,13 @@
 let taskCreator = document.getElementById("taskCreator");
 let newTaskField = document.getElementById("newTask");
+let counterField = document.getElementById("counterField")
 
 document.addEventListener("keyup", (event) => {
   switch (event.key) {
     case "Enter":
       if (taskCreator.value != "") {
         createTask();
+        counterField.innerHTML = `${countElements(taskCreator)} Items left`;
       }
       break;
 
@@ -17,6 +19,7 @@ document.addEventListener("keyup", (event) => {
 function createTask() {
   var newTask = document.createElement("li");
   newTask.classList.add("task__new-container");
+  newTask.id = "newTaskId";
 
   var flexContainer = document.createElement("div");
   flexContainer.classList.add("flex-container");
@@ -46,3 +49,11 @@ function createTask() {
     newTask.remove();
   }
 }
+
+function countElements(id) {
+  // Get all elements with the specified id
+  const elements = document.getElementById(`#${id}`);
+  // Return the number of elements
+  return elements.length;
+}
+

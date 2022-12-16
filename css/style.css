@@ -5,7 +5,7 @@
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
   --Bright_Blue: hsl(220, 98%, 61%);
-  --Check_Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  --Check_Background: linear-gradient(#57ddff,	#c058f3);
   /*light theme*/
   --Very_Light_Gray: hsl(0, 0%, 98%);
   --Very_Light_Grayish_Blue: hsl(236, 33%, 92%);
@@ -48,7 +48,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 2rem 1rem;
+  margin: 2rem auto;
   background-color: var(--Very_Dark_Desaturated_Blue);
   width: 90%;
   height: 2.5rem;
@@ -72,7 +72,7 @@ body {
   width: 100%;
   color: var(--Light_Grayish_Blue);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 .task__insert-input:focus {
@@ -88,7 +88,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0rem 1rem;
+  margin: 0rem auto;
   background-color: var(--Very_Dark_Desaturated_Blue);
   width: 90%;
   height: 2.5rem;
@@ -98,15 +98,6 @@ body {
 
 .task__new-container:first-child {
   border-radius: 5px 5px 0 0;
-}
-
-.task__new-container:last-child {
-  border-radius: 0 0 5px 5px;
-  border: none;
-}
-
-.task__new-container:only-child {
-  border-radius: 5px;
 }
 
 .flex-container {
@@ -120,7 +111,7 @@ ul li {
 }
 
 .done {
-  background-image: url(../images/icon-check.svg);
+  background: url(../images/icon-check.svg), var(--Check_Background);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -135,9 +126,50 @@ ul li {
   color: transparent;
 }
 
+.counter__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0rem auto;
+  background-color: var(--Very_Dark_Desaturated_Blue);
+  width: 90%;
+  height: 2.5rem;
+  border: none;
+  border-radius: 0 0 5px 5px;
+}
+
+.counter-item {
+  color: var(--Dark_Grayish_Blue);
+  margin: 0 1rem;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  background-color: var(--Very_Dark_Desaturated_Blue);
+  width: 90%;
+  height: 2.5rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.filter__btn {
+  background-color: transparent;
+  border: none;
+  color: var(--Dark_Grayish_Blue);
+  font-size: 1rem;
+  margin-left: 2rem;
+}
+
+.filter__btn:hover {
+  cursor: pointer;
+}
+
 .attribution {
-  margin-top: 4rem;
-  font-size: 11px;
+  margin-top: 2rem;
+  font-size: 0.8rem;
   text-align: center;
   color: var(--Dark_Grayish_Blue);
 }
