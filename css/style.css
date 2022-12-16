@@ -56,21 +56,11 @@ body {
   border-radius: 5px;
 }
 
-.task__circle-header {
-  margin-left: 1rem;
-  margin-right: 0.5rem;
-  height: 1rem;
-  width: 1.2rem;
-  background-color: var(--Very_Dark_Desaturated_Blue);
-  border: solid 1px var(--Very_Dark_Grayish_Blue_dark);
-  border-radius: 50%;
-}
-
 .task__circle {
   margin-left: 1rem;
   margin-right: 0.5rem;
   height: 1rem;
-  width: 1.5rem;
+  width: 1.2rem;
   background-color: var(--Very_Dark_Desaturated_Blue);
   border: solid 1px var(--Very_Dark_Grayish_Blue_dark);
   border-radius: 50%;
@@ -81,6 +71,8 @@ body {
   border: none;
   width: 100%;
   color: var(--Light_Grayish_Blue);
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .task__insert-input:focus {
@@ -117,20 +109,30 @@ body {
   border-radius: 5px;
 }
 
-#eraseTask {
-  margin-right: 1rem;
-}
-
-.task__new-task {
+.flex-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin: 0 1rem;
-  background-color: var(--Very_Dark_Desaturated_Blue);
-  width: 100%;
-  height: 2.5rem;
-  border: none;
+}
+
+ul li {
   color: var(--Light_Grayish_Blue);
+  align-self: flex-end;
+}
+
+.done {
+  background-image: url(../images/icon-check.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.del__btn {
+  background-image: url(../images/icon-cross.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  margin-right: 1rem;
+  background-color: transparent;
+  color: transparent;
 }
 
 .attribution {

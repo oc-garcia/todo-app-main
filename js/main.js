@@ -1,15 +1,10 @@
 let taskCreator = document.getElementById("taskCreator");
 let newTaskField = document.getElementById("newTask");
-let task = document.getElementById("task");
-let eraseTask = document.getElementById("eraseTask");
 
 document.addEventListener("keyup", (event) => {
   switch (event.key) {
     case "Enter":
-      if (taskCreator.value != "") {
-        newTaskField.innerHTML += `<div class="task__new-container"><div class="task__circle"></div><div class="task__new-task" id="task">${taskCreator.value}</div><img src="./images/icon-cross.svg" id="eraseTask"></div>`;
-        taskCreator.value = "";
-      }
+      createTask();
       break;
 
     default:
@@ -17,12 +12,35 @@ document.addEventListener("keyup", (event) => {
   }
 });
 
-if (eraseTask) {
-  for (let i = 0; i < eraseTask.length; i++) {
-    eraseTask[i].addEventListener("click", clearTask(task[i]));
-  }
-}
+function createTask() {
+  var newTask = document.createElement("li");
+  newTask.classList.add("task__new-container");
 
-function clearTask(prmt) {
-  console.log(prmt);
+  var flexContainer = document.createElement("div");
+  flexContainer.classList.add("flex-container");
+
+  var circle = document.createElement("div");
+  circle.classList.add("task__circle");
+
+  newTaskField.appendChild(newTask);
+  newTask.appendChild(flexContainer);
+  flexContainer.appendChild(circle);
+  flexContainer.appendChild(document.createTextNode(taskCreator.value));
+  taskCreator.value = "";
+
+  function concluidaAtividade() {
+    circle.classList.toggle("done");
+  }
+
+  circle.addEventListener("click", concluidaAtividade);
+
+  var botaoDeletar = document.createElement("button");
+  botaoDeletar.classList.add("del__btn");
+  botaoDeletar.appendChild(document.createTextNode("X"));
+  newTask.appendChild(botaoDeletar);
+  botaoDeletar.addEventListener("click", deleteItem);
+
+  function deleteItem() {
+    newTask.remove();
+  }
 }
