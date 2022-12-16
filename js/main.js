@@ -7,7 +7,7 @@ document.addEventListener("keyup", (event) => {
     case "Enter":
       if (taskCreator.value != "") {
         createTask();
-        counterField.innerHTML = `${countElements(taskCreator)} Items left`;
+        counterField.innerHTML = `${countElements("newTaskId")} Items left`;
       }
       break;
 
