@@ -64,9 +64,15 @@ function addBar() {
   const field = document.getElementById("counterContainer");
   if (countElements() == 0) {
     field.className = "hide";
-    return console.log("hidden");
   } else {
     field.className = "counter__container";
-    return console.log("rendered");
   }
+}
+
+let btnClear = document.getElementById("clearCompleted");
+
+btnClear.addEventListener("click", removeCompleted);
+
+function removeCompleted() {
+  console.log("Removing completed");
 }
