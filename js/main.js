@@ -1,13 +1,13 @@
 let taskCreator = document.getElementById("taskCreator");
 let newTaskField = document.getElementById("newTask");
-let counterField = document.getElementById("counterField")
+let counterField = document.getElementById("counterField");
 
 document.addEventListener("keyup", (event) => {
   switch (event.key) {
     case "Enter":
       if (taskCreator.value != "") {
         createTask();
-        counterField.innerHTML = `${countElements("newTaskId")} Items left`;
+        counterField.innerHTML = `${countElements()} Items left`;
       }
       break;
 
@@ -47,13 +47,13 @@ function createTask() {
 
   function deleteItem() {
     newTask.remove();
+    counterField.innerHTML = `${countElements()} Items left`;
   }
 }
 
-function countElements(id) {
+function countElements() {
   // Get all elements with the specified id
-  const elements = document.getElementById(`#${id}`);
+  const elements = document.querySelectorAll("li.task__new-container");
   // Return the number of elements
   return elements.length;
 }
-
