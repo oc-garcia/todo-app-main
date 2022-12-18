@@ -32,6 +32,7 @@ function createTask() {
   flexContainer.appendChild(circle);
   flexContainer.appendChild(document.createTextNode(taskCreator.value));
   taskCreator.value = "";
+  addBar();
 
   function concluidaAtividade() {
     circle.classList.toggle("done");
@@ -48,6 +49,7 @@ function createTask() {
   function deleteItem() {
     newTask.remove();
     counterField.innerHTML = `${countElements()} Items left`;
+    addBar();
   }
 }
 
@@ -56,4 +58,15 @@ function countElements() {
   const elements = document.querySelectorAll("li.task__new-container");
   // Return the number of elements
   return elements.length;
+}
+
+function addBar() {
+  const field = document.getElementById("counterContainer");
+  if (countElements() == 0) {
+    field.className = "hide";
+    return console.log("hidden");
+  } else {
+    field.className = "counter__container";
+    return console.log("rendered");
+  }
 }
