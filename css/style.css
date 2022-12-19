@@ -97,6 +97,7 @@ body {
 
 .task__new-container:first-child {
   border-radius: 5px 5px 0 0;
+  border-bottom: 1px solid var(--Dark_Grayish_Blue);
 }
 
 .flex-container {
@@ -107,6 +108,7 @@ body {
 ul li {
   color: var(--Light_Grayish_Blue);
   align-self: flex-end;
+  border-bottom: 1px solid var(--Dark_Grayish_Blue);
 }
 
 .done {

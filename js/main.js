@@ -74,8 +74,21 @@ let btnClear = document.getElementById("clearCompleted");
 btnClear.addEventListener("click", removeCompleted);
 
 function removeCompleted() {
-  const checkBox = document.querySelectorAll("div.done");
-  //let task = document.querySelectorAll("li.task__new-container");
-  //task = task.filter(() => checkBox.classList.contains("div.done"));
-  console.log(checkBox);
+  let task = document.querySelectorAll("li.task__new-container");
+  let circle = document.querySelectorAll(".task__circle");
+  for (let i = 0; i < task.length; i++) {
+    if (circle[i].classList.contains("done")) {
+      task[i - 1].remove();
+      counterField.innerHTML = `${countElements()} Items left`;
+    }
+  }
+
+  if (circle[0].classList.contains("done")) {
+    task[0].remove();
+    counterField.innerHTML = `${countElements()} Items left`;
+  }
+}
+
+function filterTasks(prmt) {
+  
 }
