@@ -115,7 +115,7 @@ body {
   align-items: center;
 }
 
-ul li {
+ul {
   color: var(--Light_Grayish_Blue);
   align-self: flex-end;
 }
@@ -124,13 +124,15 @@ ul li {
   color: var(--Light_Grayish_Blue);
   align-self: flex-end;
   color: var(--Dark_Grayish_Blue);
-  text-decoration:line-through;
+  text-decoration: line-through;
 }
 
 .done {
   background: url(../images/icon-check.svg), var(--Check_Background);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: center;
+  background-position: center;
+  border-radius: 50%;
 }
 
 .del__btn {
@@ -141,6 +143,7 @@ ul li {
   margin-right: 1rem;
   background-color: transparent;
   color: transparent;
+  text-decoration: none;
 }
 
 .counter__container {
