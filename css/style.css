@@ -118,7 +118,13 @@ body {
 ul li {
   color: var(--Light_Grayish_Blue);
   align-self: flex-end;
-  border-bottom: 1px solid var(--Dark_Grayish_Blue);
+}
+
+.done-text {
+  color: var(--Light_Grayish_Blue);
+  align-self: flex-end;
+  color: var(--Dark_Grayish_Blue);
+  text-decoration:line-through;
 }
 
 .done {

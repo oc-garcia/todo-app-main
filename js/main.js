@@ -36,6 +36,13 @@ function createTask() {
 
   function concluidaAtividade() {
     circle.classList.toggle("done");
+    if (circle.classList.contains("done")) {
+      flexContainer.parentNode.classList.add("done-text");
+      counterField.innerHTML = `${countElements()} Items left`;
+    } else {
+      flexContainer.parentNode.classList.remove("done-text");
+      counterField.innerHTML = `${countElements()} Items left`;
+    }
   }
 
   circle.addEventListener("click", concluidaAtividade);
@@ -55,14 +62,17 @@ function createTask() {
 
 function countElements() {
   // Get all elements with the specified id
-  const elements = document.querySelectorAll("li.task__new-container");
+  const containerElements = document.querySelectorAll("li.task__new-container");
   // Return the number of elements
-  return elements.length;
+  const containerDone = document.querySelectorAll("div.done");
+  const x = containerElements.length - containerDone.length;
+  return x;
 }
 
 function addBar() {
+  const containerElements = document.querySelectorAll("li.task__new-container");
   const field = document.getElementById("counterContainer");
-  if (countElements() == 0) {
+  if (containerElements.length == 0) {
     field.className = "hide";
   } else {
     field.className = "counter__container";
@@ -83,12 +93,6 @@ function removeCompleted() {
       addBar();
     }
   }
-  /*
-  if (circle[0].classList.contains("done")) {
-    task[0].remove();
-    counterField.innerHTML = `${countElements()} Items left`;
-  }
-  */
 }
 
 function filterTasks(prmt) {}
