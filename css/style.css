@@ -66,6 +66,16 @@ body {
   border-radius: 50%;
 }
 
+.task__circle-input {
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+  height: 1rem;
+  width: 1.2rem;
+  background-color: var(--Very_Dark_Desaturated_Blue);
+  border: solid 1px var(--Very_Dark_Grayish_Blue_dark);
+  border-radius: 50%;
+}
+
 .task__insert-input {
   background-color: var(--Very_Dark_Desaturated_Blue);
   border: none;

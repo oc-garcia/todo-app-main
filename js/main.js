@@ -78,17 +78,17 @@ function removeCompleted() {
   let circle = document.querySelectorAll(".task__circle");
   for (let i = 0; i < task.length; i++) {
     if (circle[i].classList.contains("done")) {
-      task[i - 1].remove();
+      task[i].remove();
       counterField.innerHTML = `${countElements()} Items left`;
+      addBar();
     }
   }
-
+  /*
   if (circle[0].classList.contains("done")) {
     task[0].remove();
     counterField.innerHTML = `${countElements()} Items left`;
   }
+  */
 }
 
-function filterTasks(prmt) {
-  
-}
+function filterTasks(prmt) {}
