@@ -95,4 +95,17 @@ function removeCompleted() {
   }
 }
 
-function filterTasks(prmt) {}
+let selectedBtn = document.querySelectorAll("button.filter__btn");
+selectedBtn[0].addEventListener("click", () => filterTasks(selectedBtn[0]));
+selectedBtn[1].addEventListener("click", () => filterTasks(selectedBtn[1]));
+selectedBtn[2].addEventListener("click", () => filterTasks(selectedBtn[2]));
+
+function filterTasks(prmt) {
+  if (prmt.value === "All") {
+    console.log("All");
+  } else if (prmt.value === "Active") {
+    console.log("Active");
+  } else if (prmt.value === "Completed") {
+    console.log("Completed");
+  }
+}

@@ -183,6 +183,18 @@ ul {
   margin-left: 2rem;
 }
 
+.selected {
+  background-color: transparent;
+  border: none;
+  color: var(--Bright_Blue);
+  font-size: 1rem;
+  margin-left: 2rem;
+}
+
+.filter__btn-selected:hover {
+  cursor: pointer;;
+}
+
 .filter__btn:hover {
   cursor: pointer;
 }
