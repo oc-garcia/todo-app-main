@@ -74,5 +74,8 @@ let btnClear = document.getElementById("clearCompleted");
 btnClear.addEventListener("click", removeCompleted);
 
 function removeCompleted() {
-  console.log("Removing completed");
+  const checkBox = document.querySelectorAll("div.done");
+  //let task = document.querySelectorAll("li.task__new-container");
+  //task = task.filter(() => checkBox.classList.contains("div.done"));
+  console.log(checkBox);
 }

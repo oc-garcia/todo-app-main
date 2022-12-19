@@ -5,7 +5,7 @@
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
   --Bright_Blue: hsl(220, 98%, 61%);
-  --Check_Background: linear-gradient(#57ddff,	#c058f3);
+  --Check_Background: linear-gradient(#57ddff, #c058f3);
   /*light theme*/
   --Very_Light_Gray: hsl(0, 0%, 98%);
   --Very_Light_Grayish_Blue: hsl(236, 33%, 92%);
@@ -92,7 +92,6 @@ body {
   background-color: var(--Very_Dark_Desaturated_Blue);
   width: 90%;
   height: 2.5rem;
-  border: none;
   border-bottom: 1px solid var(--Dark_Grayish_Blue);
 }
 
@@ -167,8 +166,12 @@ ul li {
   cursor: pointer;
 }
 
-.hide{
-  display:none;
+.hide {
+  display: none;
+}
+
+#clearCompleted {
+  cursor: pointer;
 }
 
 .attribution {
