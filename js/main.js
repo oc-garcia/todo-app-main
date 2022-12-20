@@ -101,11 +101,38 @@ selectedBtn[1].addEventListener("click", () => filterTasks(selectedBtn[1]));
 selectedBtn[2].addEventListener("click", () => filterTasks(selectedBtn[2]));
 
 function filterTasks(prmt) {
+  let done = document.querySelectorAll(".done");
+  let circle = document.querySelectorAll(".task__circle");
+  let flexContainer = document.querySelectorAll(".flex-container");
   if (prmt.value === "All") {
-    console.log("All");
+    done.forEach((ele) => {
+      ele.parentElement.parentElement.className = "task__new-container";
+    });
+    circle.forEach((ele) => {
+      ele.parentElement.parentElement.className = "task__new-container";
+    });
+    selectedBtn[0].classList.add("selected");
+    selectedBtn[1].classList.remove("selected");
+    selectedBtn[2].classList.remove("selected");
   } else if (prmt.value === "Active") {
-    console.log("Active");
+    circle.forEach((ele) => {
+      ele.parentElement.parentElement.className = "task__new-container";
+    });
+    done.forEach((ele) => {
+      ele.parentElement.parentElement.className = "hide";
+    });
+    selectedBtn[1].classList.add("selected");
+    selectedBtn[0].classList.remove("selected");
+    selectedBtn[2].classList.remove("selected");
   } else if (prmt.value === "Completed") {
-    console.log("Completed");
+    circle.forEach((ele) => {
+      ele.parentElement.parentElement.className = "hide";
+    });
+    done.forEach((ele) => {
+      ele.parentElement.parentElement.className = "task__new-container";
+    });
+    selectedBtn[2].classList.add("selected");
+    selectedBtn[0].classList.remove("selected");
+    selectedBtn[1].classList.remove("selected");
   }
 }
