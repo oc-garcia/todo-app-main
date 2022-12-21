@@ -103,7 +103,6 @@ selectedBtn[2].addEventListener("click", () => filterTasks(selectedBtn[2]));
 function filterTasks(prmt) {
   let done = document.querySelectorAll(".done");
   let circle = document.querySelectorAll(".task__circle");
-  let flexContainer = document.querySelectorAll(".flex-container");
   if (prmt.value === "All") {
     done.forEach((ele) => {
       ele.parentElement.parentElement.className = "task__new-container";
