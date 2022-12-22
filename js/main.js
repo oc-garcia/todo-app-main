@@ -37,10 +37,10 @@ function createTask() {
   function concluidaAtividade() {
     circle.classList.toggle("done");
     if (circle.classList.contains("done")) {
-      flexContainer.parentNode.classList.add("done-text");
+      //flexContainer.parentNode.classList.add("done-text");
       counterField.innerHTML = `${countElements()} Items left`;
     } else {
-      flexContainer.parentNode.classList.remove("done-text");
+     // flexContainer.parentNode.classList.remove("done-text");
       counterField.innerHTML = `${countElements()} Items left`;
     }
   }
