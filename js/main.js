@@ -113,6 +113,8 @@ function filterTasks(prmt) {
     selectedBtn[0].classList.add("selected");
     selectedBtn[1].classList.remove("selected");
     selectedBtn[2].classList.remove("selected");
+    addBar();
+    counterField.innerHTML = `${countElements()} Items left`;
   } else if (prmt.value === "Active") {
     circle.forEach((ele) => {
       ele.parentElement.parentElement.className = "task__new-container";
@@ -123,6 +125,8 @@ function filterTasks(prmt) {
     selectedBtn[1].classList.add("selected");
     selectedBtn[0].classList.remove("selected");
     selectedBtn[2].classList.remove("selected");
+    addBar();
+   // counterField.innerHTML = `${countElements()} Items left`;
   } else if (prmt.value === "Completed") {
     circle.forEach((ele) => {
       ele.parentElement.parentElement.className = "hide";
@@ -133,5 +137,7 @@ function filterTasks(prmt) {
     selectedBtn[2].classList.add("selected");
     selectedBtn[0].classList.remove("selected");
     selectedBtn[1].classList.remove("selected");
+    addBar();
+    //counterField.innerHTML = `${countElements()} Items left`;
   }
 }
