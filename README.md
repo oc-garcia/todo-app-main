@@ -10,7 +10,7 @@ https://oc-garcia.github.io/todo-app-main/
 https://github.com/oc-garcia/todo-app-main
 
 ## Project Image
-![](./images/.png#vitrinedev)
+![](./images/Screenshot%20from%202023-01-03%2023-30-20.png#vitrinedev)
 
 ## Project details
-Countdown timer that can be customized, made as a challenge for Front-End Mentor. 
+TO DO app, user is able to include, delete and filter trought his created tasks. 
